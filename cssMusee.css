@@ -1,0 +1,32 @@
+div.head{
+    background-color: firebrick;
+    color: white;
+    height: 60px;
+}
+
+div.foot{
+    background-color: rgba(0, 0, 0, 0.904);
+    color: white;
+    height: 100px;
+}
+
+div.container{
+    width: 100%;
+    height: 100%;
+}
+
+.bg-image{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+}
+
+#second{
+    text-align: center;
+    font-size:200%;
+}
+
+#third{
+    text-align: end;
+}
+
