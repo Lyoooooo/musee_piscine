@@ -40,7 +40,7 @@
             $ligne = mysqli_fetch_assoc($res);
             if($mail != $ligne["mail"])
             {
-                $res = mysqli_query($id, "insert into user value (null,'$nom','$prenom','$mail','$adresse','$cp','$mdp','0',0)");
+                $res = mysqli_query($id, "insert into user value (null,'$nom','$prenom','$mail','$adresse','$cp','$mdp','0','0','0')");
                 echo"Inscription réussie ! <br>Chargement de la page d'inscription...";
                 header('refresh:3;url=loginQCM.php');
                 exit();
