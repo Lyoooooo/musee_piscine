@@ -18,7 +18,7 @@
     <?php
 
     // connexion au serveur mariaDB
-    $id = mysqli_connect("127.0.0.1:3307","root","","musee");
+    $id = mysqli_connect("127.0.0.1","root","","musee");
     // execution d'une requete stockage du resultat dans $resultat
     $req = "select * from user";
     $resultat = mysqli_query($id, $req);
