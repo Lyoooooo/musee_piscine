@@ -30,7 +30,7 @@
     while($ligne = mysqli_fetch_assoc($resultat)){
     echo"<tr>
             <td>".$ligne["idu"]."</td>
-            <td><a href='detail_compte.php?idu=".$ligne["idu"]."'><img src='images/voir.png' width='30'></a></td>
+            <td><a href='detail_compte.php?idu=".$ligne["idu"]."'><img src='images/voir.jpg' width='30'></a></td>
         </tr>";
     }
     echo "</table> Il y a ".mysqli_num_rows($resultat)." demande(s).";

@@ -10,7 +10,7 @@
 <body>
     <h1>Détail du Compte</h1>
 
-    <table>
+    <!-- <table>
         <tr>
             <th>Numéro</th>
             <th>Nom</th>
@@ -22,7 +22,7 @@
             <th>Avatar</th>
             <th>Accepter</th>
             <th>Refuser</th>
-        </tr>
+        </tr> -->
     <?php
     // connexion au serveur mysql ou mariaDB
     $id = mysqli_connect("127.0.0.1:3307","root","","musee");
@@ -31,24 +31,76 @@
     $req = "select * from user where idu=$idu";
     $resultat = mysqli_query($id, $req);
     // Récupération
-    while($ligne = mysqli_fetch_assoc($resultat)){
-    echo "<tr>
-               <td>".$ligne["idu"]."</td>
-               <td>".$ligne["nom"]."</td>
-               <td>".$ligne["prenom"]."</td>
-               <td>".$ligne["mail"]."</td>
-               <td>".$ligne["adresse"]."</td>
-               <td>".$ligne["postal"]."</td>
-               <td>".$ligne["niv"]."</td>
-               <td>".$ligne["avatar"]."</td>
-               <td><a href='ok.php?idu=".$ligne["idu"]."'><img src='images/ok.png' width='30'></a></td>
-               <td><a href='sup.php?idu=".$ligne["idu"]."'><img src='images/sup.png' width='30'></a></td>
-             </tr>";
-    }
+    // while($ligne = mysqli_fetch_assoc($resultat)){
+    // echo "<tr>
+    //            <td>".$ligne["idu"]."</td>
+    //            <td>".$ligne["nom"]."</td>
+    //            <td>".$ligne["prenom"]."</td>
+    //            <td>".$ligne["mail"]."</td>
+    //            <td>".$ligne["adresse"]."</td>
+    //            <td>".$ligne["postal"]."</td>
+    //            <td>".$ligne["niv"]."</td>
+    //            <td>".$ligne["avatar"]."</td>
+    //            <td><a href='ok.php?idu=".$ligne["idu"]."'><img src='images/ok.png' width='30'></a></td>
+    //            <td><a href='sup.php?idu=".$ligne["idu"]."'><img src='images/sup.png' width='30'></a></td>
+    //          </tr>";
+    // }
     ?>
+    </table>
     <br><br>
-
+    <?php 
+    $idu = $_GET["idu"];
+    $req = "select * from user where idu=$idu";
+    $resultat = mysqli_query($id, $req);
+    $ligne = mysqli_fetch_assoc($resultat)?>
+    <table>
+        <tr>
+            <th>Numéro du compte</th>
+            <?php echo"<td>".$ligne["idu"]."</td>"?>
+        </tr>
+        <tr>
+            <th>Nom</th>
+            <?php echo"<td>".$ligne["nom"]."</td>"?>
+        </tr>
+        <tr>
+            <th>Prénom</th>
+            <?php echo"<td>".$ligne["prenom"]."</td>"?>
+        </tr>
+        <tr>
+            <th>Mail</th>
+            <?php echo"<td>".$ligne["mail"]."</td>"?>
+        </tr>
+        <tr>
+            <th>Adresse</th>
+            <?php echo"<td>".$ligne["adresse"]."</td>"?>
+        </tr>
+        <tr>
+            <th>Code Postal</th>
+            <?php echo"<td>".$ligne["postal"]."</td>"?>
+        </tr>
+        <tr>
+            <th>Niveau</th>
+            <?php echo"<td>".$ligne["niv"]."</td>"?>
+        </tr>
+        <tr>
+            <th>Avatar</th>
+            <?php echo"<td>".$ligne["avatar"]."</td>"?>
+        </tr>
     
+    </table><br>
+
+    <div class= "valide_sup">
+    <a href='ok.php?idu=<?php echo"".$ligne["idu"].""?>'><img src='images/ok.png' width='30'></a> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <a href='sup.php?idu=<?php echo"".$ligne["idu"].""?>'><img src='images/sup.png' width='30'></a>
+    </div>
+
+    <div class="valide_sup">
+        &nbsp&nbsp&nbsp&nbsp
+        Valider
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        Supprimer
+    </div>
+
     <?php
     // // connexion au serveur mysql ou mariaDB
     // $id = mysqli_connect("127.0.0.1:3307","root","","musee");
