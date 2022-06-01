@@ -10,15 +10,11 @@
 <body>
     <h1>Demande de comptes</h1><br>
 
-
     <table>
         <tr>
             <th>Numéro du compte</th>
             <th>Voir le profil en détail</th>
         </tr>
-
-
-
     <?php
 
     // connexion au serveur mariaDB

@@ -55,3 +55,19 @@ h1{
 .valide_sup{
     text-align: center;
 }
+
+.image_carou{
+    position: absolute;
+    text-align: left;
+    width: 500px;
+    height: 500px;
+}
+
+.description_produit{
+    background-color: chartreuse;
+}
+
+.nom{
+    text-align: center;
+    font-size: x-large;
+}
