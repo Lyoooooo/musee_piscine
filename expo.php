@@ -1,6 +1,6 @@
 <?php
-    $idu = $_GET["idu"];
-    //$idu= 1;
+    session_start();
+    $idu=$_SESSION["idu"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
