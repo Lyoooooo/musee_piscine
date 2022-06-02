@@ -65,7 +65,7 @@
         <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
           Choisir un avatar
         </button>
-
+</div>
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -92,7 +92,7 @@
             </div>
           </div>
         </div>
-      </div>
+      
       <div class="col-12 text-start ">
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
