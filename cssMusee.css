@@ -86,6 +86,22 @@ h1{
     text-align: center;
 }
 
+.image_carou{
+    position: absolute;
+    text-align: left;
+}
+
+.description_produit{
+    background-color: #8b1818;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.nom{
+    text-align: center;
+    font-size: x-large;
+}
 .rating {
     direction: rtl;
  }
