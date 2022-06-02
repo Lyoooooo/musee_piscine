@@ -1,5 +1,6 @@
 <?php
-     $idu = $_GET["idu"];
+session_start();
+$idu = $_SESSION["idu"];
     // $idu= 1;
 ?>
 
@@ -32,42 +33,40 @@
 
 <div class="fondinsc">
         <div class="row g-3 position-absolute top-50 start-50 translate-middle rounded shadow text-center" style="background-color: #b22222">
-      <form action="modif2.php" method="post">     
         <div class="h1">
                 <h1>Votre compte</h1>
             </div>
             <div class=text-end>
             <form action="modif2.php" method="post">
-          <a href="connexion.php" class="button">SE CONNECTER</a> <br>
       </div>
             
             <div class="col-md-4">
         <label for="validationDefault01" class="form-label">Nom</label>
-        <input type="text" name="nom" class="form-control" id="" value="<?php echo $nom ?>" required>
+        <input type="text" name="nom" class="form-control" id="" value="<?php echo "$nom" ?>" required>
       </div>
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label">Prénom</label>
-        <input type="text" name="prenom" class="form-control" id="" value="<?php echo $prenom ?>" required>
+        <input type="text" name="prenom" class="form-control" id="" value="<?php echo "$prenom" ?>" required>
       </div>
       <div class="col-md-4">
         <label for="validationDefaultUsername" class="form-label">Adresse mail</label>
         <div class="input-group">
           <span class="input-group-text" id="inputGroupPrepend2">@</span>
-          <input type="text" name="mail" class="form-control" id="" aria-describedby="inputGroupPrepend2" value="<?php echo $mail ?>" disabled required>
+          <input type="text" name="mail" class="form-control" id="" aria-describedby="inputGroupPrepend2" value="<?php echo "$mail" ?>" disabled required>
         </div>
       </div>
       <div class="col-md-6">
         <label for="validationDefault03" class="form-label">Adresse Postale (Numéro, rue, ville)</label>
-        <input type="text" name="adresse" class="form-control" id="" value="<?php echo $adresse ?>" required>
+        <input type="text" name="adresse" class="form-control" id="" value="<?php echo "$adresse" ?>" required>
       </div>
       <div class="col-md-3">
         <label for="validationDefault04" class="form-label">Code postal</label>
-        <input type="text" name="cp" class="form-control" id="" value="<?php echo $cp ?>" required>
+        <input type="text" name="cp" class="form-control" id="" value="<?php echo "$cp" ?>" required>
         </select>
       </div>
       <div class="col-md-4">
         <label for="validationDefault05" class="form-label">Mot de passe</label>
-        <input type="text" name="mdp" class="form-control" id="" value="<?php echo $mdp ?>" required>
+        <input type="text" name="mdp" class="form-control" id="" value="<?php echo "$mdp" ?>" required>
       </div>
         
       <input type="button" value="Modifier" name="bouton">
