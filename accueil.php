@@ -39,7 +39,10 @@
             <div class="bg-image" style="background-image: url('images/back1.png');
             height: 100vh">
             </div>
-            <button type="button" class="btn btn-outline-danger btn-lg position-absolute top-50 start-50 translate-middle" style="width:400px;height:150px;color: white;font-weight: bold;">ENTRER DANS LE MUSÉE</button>
+            <form action="" method="post">
+            <input type="submit" name="bouton" class="btn btn-outline-danger btn-lg position-absolute top-50 start-50 translate-middle" style="width:400px;height:150px;color: white;font-weight: bold;" value="ENTRER DANS LE MUSÉE"></input>
+            </form>
+            
     </div>
     
 
@@ -48,5 +51,11 @@
     info légales
     </div>
     
+    <?php 
+        if(isset($_POST["bouton"]))
+        {
+            header('refresh:0;url=connexion.php');
+        }
+    ?>
 </body>
 </html>

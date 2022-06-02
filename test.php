@@ -30,7 +30,7 @@
                 <?php for($i=1; $i<11;$i++){?>
                     <div class="form-check">
                         
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault<?php echo"$i" ?>">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="<?php echo"$i" ?>" id="flexRadioDefault<?php echo"$i" ?>">
                         <label class="form-check-label" for="flexRadioDefault<?php echo"$i" ?>">
                             <img src="avatar/<?php echo"$i" ?>.png" height="50">
                         </label>
