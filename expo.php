@@ -48,31 +48,31 @@
             <div class="row">
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="images/fr.png" class="card-img-top" alt="...">
+                        <img src="images/vin.jpg" class="card-img-top" height="200">
                         <div class="card-body">
-                            <h5 class="card-title">Catégorie 1</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Découvrir</a>
+                            <h5 class="card-title">Vins</h5>
+                            <p class="card-text">Vous pensiez tout savoir sur le vin ? <br> Voici une selection non-exhaustive de nos plus beaux produits pour vous éclaircir sur les mystères de l’or rouge !</p>
+                            <a href="listeprod.php?type=vin" class="btn btn-primary">Découvrir</a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="images/fr.png" class="card-img-top" alt="...">
+                        <img src="images/spirit.jpg" class="card-img-top" height="200">
                         <div class="card-body">
-                            <h5 class="card-title">Catégorie 2</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Découvrir</a>
+                            <h5 class="card-title">Spiritueux</h5>
+                            <p class="card-text">Les spiritueux sont bien souvent connus pour leur goût, leur usage voire leur élaboration. Mais qu’en est-il de leur histoire ? Découvrez notre sélection.</p>
+                            <a href="listeprod.php?type=spirit" class="btn btn-primary">Découvrir</a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="images/fr.png" class="card-img-top" alt="...">
+                        <img src="images/exo.jpg" class="card-img-top" height="200">
                         <div class="card-body">
-                            <h5 class="card-title">Catégorie 3</h5>
+                            <h5 class="card-title">Exotiques</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Découvrir</a>
+                            <a href="listeprod.php?type=exo" class="btn btn-primary">Découvrir</a>
                         </div>
                     </div>
                 </div>

@@ -10,6 +10,10 @@
     <title>Document</title>
 </head>
 <body>
+    <?php 
+        $type = $_GET["type"];
+    ?>
+
 <div class="head fixed-top">
         <div class="container">
             <div class="row">
@@ -37,10 +41,56 @@
     </div>
 
     <div class="corpsacc">
-        <img src="images/back2.png" width=100%>
+        <img src="images/back22.png" width=100%>
         <div
             style="color:white;position: absolute;top:0;
-            width:100%;top:30vh;font-weight: bolder;font-size: larger;text-align:center;">EXPOSITIONS</div>
+            width:100%;top:30vh;font-weight: bolder;font-size: larger;text-align:center;">
+            <?php if($type == "vin")
+            {
+                echo"NOTRE SELECTION DE VINS";
+            }
+            if($type == "spirit")
+            {
+                echo"NOTRE SELECTION DE SPIRITUEUX";
+            }
+            if($type == "exo")
+            {
+                echo"NOTRE SELECTION D'ALCOOLS EXOTIQUES";
+            }
+            ?></div>
+    </div>
+    <div class="corpsliste"><br><br><br><br>
+        <div class="container">
+            <div class="row">
+
+                <?php
+                    $id = mysqli_connect("127.0.0.1","root","","musee");
+                    $res = mysqli_query($id, "select * from produit where type='$type'");
+                    while($ligne = mysqli_fetch_assoc($res))
+                    {
+                        $nom = $ligne["nom"];
+                        $idp = $ligne["idp"];
+                    
+                ?>
+                <div class="col-sm-4">
+                <br><br>
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/exo.jpg" class="card-img-top" height="200">
+                        <!-- <img src="images/<?php //echo"$image1"?>" class="card-img-top" height="200"> -->
+                        <div class="card-body">
+                                <h5 class="card-title"><?php echo"$nom" ?></h5>
+                                <p class="card-text"></p>
+                                <a href="detail_produit.php?prd=<?php echo"$idp"?>" class="btn btn-primary">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+        </div>
+        <br><br><br><br>
+    </div>
+    <div class="foot">
+    info légales
     </div>
 </body>
 </html>

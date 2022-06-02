@@ -36,14 +36,11 @@
         </div>
     </div>
     <div class="corpsacc">
-        <div class="bg-image" 
-            style="background-image: url('images/back1.png');
+            <div class="bg-image" style="background-image: url('images/back1.png');
             height: 100vh">
-        </div> 
-        <button type="button" class="btn btn-outline-danger btn-lg position-absolute top-50 start-50 translate-middle"
-        style="width:400px;height:150px;color: white;font-weight: bold;">ENTRER DANS LE MUSÉE</button>
+            </div>
+            <button type="button" class="btn btn-outline-danger btn-lg position-absolute top-50 start-50 translate-middle" style="width:400px;height:150px;color: white;font-weight: bold;">ENTRER DANS LE MUSÉE</button>
     </div>
-
     
 
 

@@ -7,7 +7,7 @@ div.head{
 div.foot{
     background-color: rgba(0, 0, 0, 0.904);
     color: white;
-    height: 200px;
+    height: 100px;
 }
 
 div.corpsexpo{
@@ -16,10 +16,15 @@ div.corpsexpo{
     height:80vmin;
 }
 
+div.corpsliste{
+    background-color:hsla(343, 92%, 19%, 0.989);
+    width: 100%;
+}
+
 div.container{
     width: 100%;
-    height: 80vh;
 }
+
 div.fondinsc{
     color: white;
     
