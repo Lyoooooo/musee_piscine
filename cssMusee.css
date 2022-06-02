@@ -10,10 +10,21 @@ div.foot{
     height: 100px;
 }
 
+div.corpsexpo{
+    background-color:hsla(343, 92%, 19%, 0.989);
+    width: 100%;
+    height:80vmin;
+}
+
+div.corpsliste{
+    background-color:hsla(343, 92%, 19%, 0.989);
+    width: 100%;
+}
+
 div.container{
     width: 100%;
-    height: 100%;
 }
+
 div.fondinsc{
     color: white;
     
@@ -25,6 +36,7 @@ div.h1{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;  
+    height: max-content;
 }
 
 #second{
@@ -34,6 +46,18 @@ div.h1{
 
 #third{
     text-align: end;
+}
+
+div.corpacc{
+    background-color: aqua;
+    height: max-content;
+}
+
+div.textexpo{
+    background-color:aquamarine;
+    text-align: center;
+    width: 50%;
+    height: 800px;
 }
 
 table{
@@ -78,3 +102,20 @@ h1{
     text-align: center;
     font-size: x-large;
 }
+.rating {
+    direction: rtl;
+ }
+ .rating a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 3em;
+    transition: color .4s;
+ }
+ .rating a:hover,
+ .rating a:focus,
+ .rating a:hover ~ a,
+ .rating a:focus ~ a {
+    color: orange;
+    cursor: pointer;
+ }
+
