@@ -15,6 +15,9 @@ session_start();
     <title>Document</title>
 </head>
 <body>
+    <?php
+        $idp=$_GET["idp"];
+    ?>
 <div class="head fixed-top">
         <div class="container">
             <div class="row">
@@ -49,15 +52,18 @@ session_start();
     $res = mysqli_query($id, $req); 
     $ligne = mysqli_fetch_assoc($res);
     $nom = $ligne["nom"];
+    $im1 = $ligne["p1"];
+    $im2 = $ligne["p2"];
     $desc = $ligne["description"];
     $deg = $ligne["degre"];
-    $im = $_GET["im"];
+
     $prix = $ligne["prix"];
     ?>
 
     <div class = "nom">
         <?php echo "$nom";?>
     </div><br><br>
+
 
 
     <div class="container">
@@ -68,19 +74,20 @@ session_start();
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
                         </div>
-                    
                         <div class="carousel-inner">
-                            <div class="carousel-item">
-                                <?php //echo " <img src='images/$im' class='d-block w-100' height='400'> ";?>
-                                <img src="images/don papa.jpg" class="d-block w-100" height="400">
+                            <div class="carousel-item active">
+                                <?php echo " <img src='images/$im1' class='d-block w-100' height='400'> ";?>
                             </div>
-                        
                             <div class="carousel-item">
-                                <?php //echo " <img src='images/$im' class='d-block w-100' height='400'> ";?>
-                                <img src="images/don papa 2.jpg" class="d-block w-100" height="400">
+                                <?php echo " <img src='images/$im2' class='d-block w-100' height='400'> ";?>
+                                <!-- <img src="images/don papa" class="d-block w-100" alt="..." height="400"> -->
                             </div>
-
+                            <!-- <div class="carousel-item">
+                                <?php //echo " <img src='images/$im' class='d-block w-100' height='400'> ";?>
+                                <img src="images/clos" class="d-block w-100" alt="..." height="400">
+                            </div> -->
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -93,22 +100,75 @@ session_start();
                     </div>
                 </div>
             </div>
-        
-        <div class="col">
-            <div class="description_produit">
-                <?php echo "$desc";?>
+            <div class="col">
+                <div class="description_produit">
+                    <?php echo "$desc";?>
+                </div>
             </div>
         </div>
-  </div><br><br><br><br>
-
-
-  <div class = "degre">
-        <?php echo "Degré: $deg %";?>
-    </div><br>
-
-    <div class = "prix">
-        <?php echo "Prix: $prix €";?>
     </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    <form action="" method="post">
+        <input type="number" class="nb" id="quantite" placeholder="Quantité" name="nb" min="1">
+        <input type="submit" value="Liker"  name="jaime" src='images/vide.png' width='30'><br><br>
+    </form>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+
+
+
+            <!-- Bonne chance à celui qui réussira les likes -->
+
+            <div class= "like">
+                <!-- <a href="like.php"><img src='images/vide.png' width='30'></a> -->
+                <img src='images/vide.png' width='30' id="like">
+                <?php
+                if(isset($_POST["jaime"])){
+                // if(isset("like")){
+                    //$id = mysqli_connect("127.0.0.1","root","","musee");
+                    $id = mysqli_connect("127.0.0.1:3307","root","","musee");
+                    //$req = "select * from produit where idp= '$idp'";
+                    $likes=$ligne["likes"];
+                    //$requete = "INSERT INTO produit ('idp', 'nom', 'description', 'prix', 'degre', 'likes') VALUES ('$idp', '$nom', '$desc', '$prix', '$deg', '1')";
+                    
+                    $requete = "INSERT INTO produit (idp, nom, description, 'prix', 'degre', 'likes') value (null, '$nom', '$desc', '$prix', '$deg', $like)";
+                    $resultat = mysqli_query($id, "insert into user value (null,'$nom','$desc','$prix','$deg','$like')");
+                    //$resultat = mysqli_query($id, $requete);
+                    header("refresh:0;url=detail_produit.php");
+                }
+                ?>
+
+
+            </div>
+
+            <div class="like">
+                J'aime
+            </div>
+
+            </div>
+            <div class="col">
+                <div class = "degre">
+                    <?php echo "Degré: $deg %";?>
+                </div><br>
+            </div>
+            <div class="col">
+                <div class = "prix">
+                    <?php echo "Prix: $prix €";?>
+                </div>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+
+
+
 
 
 

@@ -65,12 +65,13 @@ h1{
 .image_carou{
     position: absolute;
     text-align: left;
-    width: 500px;
-    height: 500px;
 }
 
 .description_produit{
-    background-color: chartreuse;
+    background-color: #8b1818;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
 }
 
 .nom{
