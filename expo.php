@@ -41,7 +41,7 @@
                 <div class="col" id="third">
                     <div class="dropdown">
                         <a class="btn sdropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                            <button class="btn btn-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="<?php $avatar ?>" height=50></button>
+                            <button class="btn btn-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="avatar/<?php echo "$avatar" ?>" height="50"></button>
 
                             <div class="offcanvas offcanvas-end" style="background-color: #b22222;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                                 <div class="offcanvas-header">
@@ -122,7 +122,7 @@ nom musee
                                         </div>
                                     </div>
                                 </div>
-                                <div class="p-3 m3">
+                                <div class="position-absolute bottom-0 end-0 p-3 m3">
                                     <h5><a href="deco.php">se déconnecter</a></H5>
                                 </div>
                             </div>
