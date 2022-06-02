@@ -1,3 +1,7 @@
+<?php
+    $idu = $_GET["idu"];
+    //$idu= 1;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +14,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
+<?php
+         $id = mysqli_connect("127.0.0.1","root","","musee");
+         $res = mysqli_query($id, "select * from user where idu='$idu'");
+         $ligne = mysqli_fetch_assoc($res);
 
+    $idu = $ligne["idu"];
+    $nom = $ligne["nom"];
+    $prenom = $ligne["prenom"];
+    $mail = $ligne ["mail"];
+    $adresse = $ligne["adresse"];
+    $cp = $ligne["postal"];
+    $mdp = $ligne["mdp"];
+    $avatar = $ligne["avatar"];
+    ?>
 <body>
     <div class="head fixed-top">
         <div class="container">
@@ -24,7 +41,7 @@
                 <div class="col" id="third">
                     <div class="dropdown">
                         <a class="btn sdropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                            <button class="btn btn-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="avatar/0.png" height=50></button>
+                            <button class="btn btn-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="<?php $avatar ?>" height=50></button>
 
                             <div class="offcanvas offcanvas-end" style="background-color: #b22222;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                                 <div class="offcanvas-header">

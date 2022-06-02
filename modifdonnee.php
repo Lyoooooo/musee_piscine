@@ -1,6 +1,6 @@
 <?php
-    // $idu = $_GET["idu"];
-    $idu= 1;
+     $idu = $_GET["idu"];
+    // $idu= 1;
 ?>
 
 <!DOCTYPE html>
