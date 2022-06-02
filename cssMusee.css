@@ -9,10 +9,22 @@ div.foot{
     color: white;
     height: 100px;
 }
+
+div.corpsexpo{
+    background-color:hsla(343, 92%, 19%, 0.989);
+    width: 100%;
+    height:80vmin;
+}
+
+div.corpsliste{
+    background-color:hsla(343, 92%, 19%, 0.989);
+    width: 100%;
+}
+
 div.container{
     width: 100%;
-    height: 100%;
 }
+
 div.fondinsc{
     color: white;
     
@@ -24,6 +36,7 @@ div.h1{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;  
+    height: max-content;
 }
 
 #second{
@@ -33,6 +46,18 @@ div.h1{
 
 #third{
     text-align: end;
+}
+
+div.corpacc{
+    background-color: aqua;
+    height: max-content;
+}
+
+div.textexpo{
+    background-color:aquamarine;
+    text-align: center;
+    width: 50%;
+    height: 800px;
 }
 
 table{
