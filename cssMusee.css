@@ -9,7 +9,6 @@ div.foot{
     color: white;
     height: 100px;
 }
-
 div.container{
     width: 100%;
     height: 100%;
@@ -61,3 +60,21 @@ h1{
 .valide_sup{
     text-align: center;
 }
+
+.rating {
+    direction: rtl;
+ }
+ .rating a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 3em;
+    transition: color .4s;
+ }
+ .rating a:hover,
+ .rating a:focus,
+ .rating a:hover ~ a,
+ .rating a:focus ~ a {
+    color: orange;
+    cursor: pointer;
+ }
+
