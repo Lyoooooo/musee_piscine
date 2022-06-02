@@ -23,7 +23,7 @@
                 </div>
                 <div class="col" id="third">
                     <div class="dropdown">
-                        <a class="btn sdropdown-toggle"  href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="btn sdropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                             <button class="btn btn-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="avatar/0.png" height=50></button>
 
                             <div class="offcanvas offcanvas-end" style="background-color: #b22222;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -42,8 +42,7 @@
                                             </h2>
                                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    <a href="compte.php">mon compte</a><br>
-                                                    <a href="modif.php">modifier mes données</a><br>
+                                                    <a href="modifdonnee.php">mon compte</a><br>
                                                 </div>
                                             </div>
                                         </div>
@@ -69,11 +68,11 @@
                                                 <div class="accordion-body">
                                                     <div class="rating">
                                                         <div class="rating">
-                                                            <a href="#5" title="Donner 1 étoiles">☆</a>
-                                                            <a href="#4" title="Donner 2 étoiles">☆</a>
+                                                            <a href="#5" title="Donner 5 étoiles">☆</a>
+                                                            <a href="#4" title="Donner 4 étoiles">☆</a>
                                                             <a href="#3" title="Donner 3 étoiles">☆</a>
-                                                            <a href="#2" title="Donner 4 étoiles">☆</a>
-                                                            <a href="#1" title="Donner 5 étoiles">☆</a>
+                                                            <a href="#2" title="Donner 2 étoiles">☆</a>
+                                                            <a href="#1" title="Donner 1 étoile">☆</a>
                                                         </div><br>
                                                         <input type="button" class="btn btn-success" value="envoyer" name="valider">
                                                     </div>
