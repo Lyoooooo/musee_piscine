@@ -74,15 +74,15 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <?php for ($i = 1; $i < 11; $i++) { ?>
-                  <div class="form-check">
+              <?php for ($i = 1; $i < 11; $i++){ ?>
+                <div class="form-check">
 
-                    <input class="form-check-input" type="radio" name="avatar" value="<?php echo "$i" ?>" id="flexRadioDefault<?php echo "$i" ?>" required>
-                    <label class="form-check-label" for="flexRadioDefault<?php echo "$i" ?>">
-                      <img src="avatar/<?php echo "$i" ?>.png" height="50">
+                    <input class="form-check-input" type="radio" name="avatar" value="<?php echo"$i" ?>" id="flexRadioDefault<?php echo"$i" ?>" required>
+                    <label class="form-check-label" for="flexRadioDefault<?php echo"$i" ?>">
+                    <img src="avatar/<?php echo"$i" ?>.png" height="50">
                     </label>
 
-                  </div>
+                </div>
                 <?php } ?>
               </div>
               <div class="modal-footer">
@@ -127,7 +127,7 @@
       if ($mail != $ligne["mail"]) {
         $res = mysqli_query($id, "insert into user value (null,'$nom','$prenom','$mail','$adresse','$cp','$mdp','$i.png',0,0)");
         echo "Inscription réussie ! <br>Chargement de la page d'inscription...";
-        header('refresh:3;url=expo.php');
+        ?> <meta http-equiv="refresh" content="1;url=expo.php"/> <?php
         exit();
       } else echo "Cette adresse mail est déjà utilisée";
     } else echo "Les deux mots de passe sont différents";
@@ -142,7 +142,7 @@
   ?>
   <div class="corpsacc">
     <div class="bg-image" style="background-image: url('images/back1.png');
-            height: 100vh">
+            height: 50vh">
     </div>
 
 </body>
