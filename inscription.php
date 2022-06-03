@@ -127,7 +127,7 @@
       if ($mail != $ligne["mail"]) {
         $res = mysqli_query($id, "insert into user value (null,'$nom','$prenom','$mail','$adresse','$cp','$mdp','$i.png',0,0)");
         echo "Inscription réussie ! <br>Chargement de la page d'inscription...";
-        ?> <meta http-equiv="refresh" content="1;url=expo.php"/> <?php
+        ?> <meta http-equiv="refresh" content="1;url=connexion.php"/> <?php
         exit();
       } else echo "Cette adresse mail est déjà utilisée";
     } else echo "Les deux mots de passe sont différents";

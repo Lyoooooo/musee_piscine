@@ -171,7 +171,7 @@ nom musee
                         <img src="images/exo.jpg" class="card-img-top" height="200">
                         <div class="card-body">
                             <h5 class="card-title">Exotiques</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">Les exotiques sont des alcools des îles qui te font danser le zouk toute la nuit tah éloise à la soirée raclette.</p>
                             <a href="listeprod.php?type=exo" class="btn btn-primary">Découvrir</a>
                         </div>
                     </div>
