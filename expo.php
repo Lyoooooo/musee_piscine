@@ -172,7 +172,7 @@ nom musee
                         <img src="images/exo.jpg" class="card-img-top" height="200">
                         <div class="card-body">
                             <h5 class="card-title">Exotiques</h5>
-                            <p class="card-text">Les exotiques sont des alcools des îles qui te font danser le zouk toute la nuit tah éloise à la soirée raclette.</p>
+                            <p class="card-text">Les Exotiques sont des alcools au gout fruité nous rappelant généralement les iles et vacances</p>
                             <a href="listeprod.php?type=exo" class="btn btn-primary">Découvrir</a>
                         </div>
                     </div>
