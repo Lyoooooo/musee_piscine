@@ -78,10 +78,10 @@ session_start();
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <?php echo " <img src='images/$im1' class='d-block w-100' height='400'> ";?>
+                                <?php echo " <img src='alcool/$im1' class='d-block w-100' height='400'> ";?>
                             </div>
                             <div class="carousel-item">
-                                <?php echo " <img src='images/$im2' class='d-block w-100' height='400'> ";?>
+                                <?php echo " <img src='alcool/$im2' class='d-block w-100' height='400'> ";?>
                                 <!-- <img src="images/don papa" class="d-block w-100" alt="..." height="400"> -->
                             </div>
                             <!-- <div class="carousel-item">

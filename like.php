@@ -10,7 +10,8 @@
 
 // $id = mysqli_connect("127.0.0.1","root","","musee");
 $id = mysqli_connect("127.0.0.1:3307","root","","musee");
-$idp=$_GET["idp"];
+//$idp=$_GET["idp"];
+$idp=$ligne["idp"];
 $req = "select * from produit where idp= '$idp'";
 $res = mysqli_query($id, $req); 
 $ligne = mysqli_fetch_assoc($res);
