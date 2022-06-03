@@ -52,6 +52,11 @@
         </form>
 
     </div>
+    <?php
+    if (isset($_POST["bouton"])) {
+        header('refresh:0;url=connexion.php');
+    }
+    ?>
 
 
 
@@ -141,11 +146,6 @@
   <!-- Copyright -->
 </footer>
 
-    <?php
-    if (isset($_POST["bouton"])) {
-        header('refresh:0;url=connexion.php');
-    }
-    ?>
 </body>
 
 </html>
