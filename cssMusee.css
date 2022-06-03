@@ -41,7 +41,7 @@ div.h1{
 
 #second{
     text-align: center;
-    font-size:200%;
+    font-size:165%;
 }
 
 #third{
@@ -92,10 +92,10 @@ h1{
 }
 
 .description_produit{
-    background-color: #8b1818;
+    background-color:hsla(343, 92%, 19%, 0.989);
     color: white;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .nom{

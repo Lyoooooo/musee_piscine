@@ -18,7 +18,7 @@
 
     <?php
     // connexion au serveur mysql ou mariaDB
-    $id = mysqli_connect("127.0.0.1:3307","root","","musee");
+    $id = mysqli_connect("127.0.0.1","root","","musee");
     $idu = $_GET["idu"];
     $req = "select * from user where idu=$idu";
     $resultat = mysqli_query($id, $req);
@@ -58,7 +58,7 @@
         </tr>
         <tr>
             <th>Niveau</th>
-            <?php echo "<td>" . $ligne["niv"] . "</td>" ?>
+            <?php echo "<td>" . $ligne["nv"] . "</td>" ?>
         </tr>
         <tr>
             <th>Avatar</th>

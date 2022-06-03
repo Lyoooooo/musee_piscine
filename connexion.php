@@ -13,13 +13,27 @@ if (isset($_POST["bouton"])) {
     $nv = $ligne["nv"];
 
     if (mysqli_num_rows($resultat) > 0) {
-        $_SESSION["idu"] = $idu;
-        $_SESSION["nom"] = $nom;
-        $_SESSION["prenom"] = $prenom;
-        $_SESSION["nv"] = $nv;
+        if($ligne["valide"]==0)
+        {
+            ?>
+                <div style="background-color:firebrick;text-align:center;color:white;">
+                    Votre compte doit être validé par un administrateur pour pouvoir se connecter
+                </div>
+            <?php 
+        }else{
+            $_SESSION["idu"] = $idu;
+            $_SESSION["nom"] = $nom;
+            $_SESSION["prenom"] = $prenom;
+            $_SESSION["nv"] = $nv;
 
-
-        header("location:expo.php");
+            if($nv == 0)
+            {
+                header("location:expo.php");
+            }else{
+                header("location:admin.php");
+            }
+            
+        }
     } else {
         $erreur = "Mail ou mot de passe incorrect !";
     }
@@ -64,6 +78,91 @@ if (isset($_POST["bouton"])) {
             height: 100vh">
             </div>
         </div>
-</body>
+        <footer class='text-center text-white ' style='background-color: rgba(0, 0, 0, 0.904);color:white;'>
+  <!-- Grid container -->
+  <div class='container pt-4'>
+    <!-- Section: Social media -->
+    <section class='mb-4'>
+      <!-- Facebook -->
+      <a
+        class='btn btn-link btn-floating btn-lg text-light m-1'
+        href='#!'
+        role='button'
+        data-mdb-ripple-color='light'
+        ><i class='bi bi-facebook'></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        class='btn btn-link btn-floating btn-lg text-light m-1'
+        href='#!'
+        role='button'
+        data-mdb-ripple-color='light'
+        ><i class='bi bi-twitter'></i
+      ></a>
+
+      <!-- Google -->
+      <a
+        class='btn btn-link btn-floating btn-lg text-light m-1'
+        href='#!'
+        role='button'
+        data-mdb-ripple-color='light'
+        ><i class='bi bi-google'></i
+      ></a>
+
+      <!-- Instagram -->
+      <a
+        class='btn btn-link btn-floating btn-lg text-light m-1'
+        href='#!'
+        role='button'
+        data-mdb-ripple-color='light'
+        ><i class='bi bi-instagram'></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        class='btn btn-link btn-floating btn-lg text-light m-1'
+        href='#!'
+        role='button'
+        data-mdb-ripple-color='light'
+        ><i class='bi bi-linkedin'></i
+      ></a>
+      <!-- Github -->
+      <a
+        class='btn btn-link btn-floating btn-lg text-light m-1'
+        href='#!'
+        role='button'
+        data-mdb-ripple-color='light'
+        ><i class='bi bi-github'></i
+      ></a>
+    </section>
+  
+  
+  
+    <!-- Section: Social media -->
+    <section class='text-center text-light'>
+  
+    <p>
+    Le Musée des Vins et Spiritueux est une marque deposée par ECE Bachelor. <br>
+    Tous droits réservés.
+    </p>
+
+        
+    
+    </section>
+  </div>
+  <!-- Grid container -->
+
+
+
+
+  <!-- Copyright -->
+  <div class='text-center text-light p-3' style='background-color: rgba(0, 0, 0, 0.2);'>
+    © 2022 M.V.S <br>Mentions légales :
+    <a href="https://www.flaticon.com/fr/icones-gratuites/avatar" title="avatar icônes">Avatar icônes créées par Prosymbols Premium - Flaticon</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+    </body>
 
 </html>
