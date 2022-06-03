@@ -25,7 +25,7 @@
         // connexion au serveur mariaDB
         $id = mysqli_connect("127.0.0.1", "root", "", "musee");
         // execution d'une requete stockage du resultat dans $resultat
-        $req = "select * from user";
+        $req = "select * from user where valide=0";
         $resultat = mysqli_query($id, $req);
         // Récupération
         while ($ligne = mysqli_fetch_assoc($resultat)) {
@@ -35,6 +35,29 @@
         </tr>";
         }
         echo "</table> Il y a " . mysqli_num_rows($resultat) . " demande(s).";
+        ?>
+
+    <hr><h1>Tous les utilisateurs</h1><br>
+
+    <table>
+        <tr>
+            <th>Numéro du compte</th>
+            <th>Voir le profil en détail</th>
+        </tr>
+    <?php
+
+        // connexion au serveur mariaDB
+        $id = mysqli_connect("127.0.0.1", "root", "", "musee");
+        // execution d'une requete stockage du resultat dans $resultat
+        $req = "select * from user where nv=0";
+        $resultat = mysqli_query($id, $req);
+        // Récupération
+        while ($ligne = mysqli_fetch_assoc($resultat)) {
+            echo "<tr>
+            <td>" . $ligne["idu"] . "</td>
+            <td><a href='detail_compte.php?idu=" . $ligne["idu"] . "'><img src='images/voir.jpg' width='30'></a></td>
+        </tr>";
+        }
         ?>
 
 </body>

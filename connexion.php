@@ -13,13 +13,27 @@ if (isset($_POST["bouton"])) {
     $nv = $ligne["nv"];
 
     if (mysqli_num_rows($resultat) > 0) {
-        $_SESSION["idu"] = $idu;
-        $_SESSION["nom"] = $nom;
-        $_SESSION["prenom"] = $prenom;
-        $_SESSION["nv"] = $nv;
+        if($ligne["valide"]==0)
+        {
+            ?>
+                <div style="background-color:firebrick;text-align:center;color:white;">
+                    Votre compte doit être validé par un administrateur pour pouvoir se connecter
+                </div>
+            <?php 
+        }else{
+            $_SESSION["idu"] = $idu;
+            $_SESSION["nom"] = $nom;
+            $_SESSION["prenom"] = $prenom;
+            $_SESSION["nv"] = $nv;
 
-
-        header("location:expo.php");
+            if($nv == 0)
+            {
+                header("location:expo.php");
+            }else{
+                header("location:admin.php");
+            }
+            
+        }
     } else {
         $erreur = "Mail ou mot de passe incorrect !";
     }
