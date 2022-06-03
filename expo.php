@@ -143,7 +143,7 @@ nom musee
             width:100%;top:30vh;font-weight: bolder;font-size: larger;text-align:center;">EXPOSITIONS</div>
     </div>
     <div class="corpsexpo">
-        <br><br><br><br><br><br>
+        <br><br><br>
         <div class="container">
             <div class="row">
                 <div class="col">
