@@ -39,7 +39,9 @@ $idu = $_SESSION["idu"];
             <div class=text-end>
             <form action="modif2.php" method="post">
       </div>
-            
+      <div class="d-grid gap-2 d-md-block">
+      <button class="btn btn-transparent" type="button " data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="avatar/<?php echo "$avatar" ?>" height="50"></button>
+      </div>
             <div class="col-md-4">
         <label for="validationDefault01" class="form-label">Nom</label>
         <input type="text" name="nom" class="form-control" id="" value="<?php echo "$nom" ?>" required>
