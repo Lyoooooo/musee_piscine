@@ -32,53 +32,87 @@ $idu = $_SESSION["idu"];
     ?>
 
 <div class="fondinsc">
-        <div class="row g-3 position-absolute top-50 start-50 translate-middle rounded shadow text-center" style="background-color: #b22222">
+        <div class="row g-3 shadow text-center" style="background-color: #b22222">
         <div class="h1">
                 <h1>Votre compte</h1>
+                <div class="position-absolute top-0 end-0 p-3 m3">
+                                    <h5><a href="expo.php">retour</a></H5>
+                                </div>
             </div>
             <div class=text-end>
             <form action="modif2.php" method="post">
       </div>
       <div class="d-grid gap-2 d-md-block">
-      <button class="btn btn-transparent" type="button " data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="avatar/<?php echo "$avatar" ?>" height="50"></button>
+      <img src="avatar/<?php echo "$avatar" ?>" height="50">
       </div>
+      <div>
+        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          modifier votre avatar
+        </button>
+</div>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+              <?php for ($i = 1; $i < 11; $i++){ ?>
+                <div class="form-check">
+
+                    <input class="form-check-input" type="radio" name="" value="<?php echo"$i" ?>" id="flexRadioDefault<?php echo"$i" ?>">
+                    <label class="form-check-label" for="flexRadioDefault<?php echo"$i" ?>">
+                    <img src="avatar/<?php echo"$i" ?>.png" height="50">
+                    </label>
+
+                </div>
+                <?php } ?>
+              </div>
+              <div class="modal-footer">
+                <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">reset</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">valider</button>
+              </div>
+            </div>
+          </div>
+        </div>
             <div class="col-md-4">
         <label for="validationDefault01" class="form-label">Nom</label>
-        <input type="text" name="nom" class="form-control" id="" value="<?php echo "$nom" ?>" required>
+        <input type="text" name="nom" class="form-control" id="" value="<?=$nom?>" required>
       </div>
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label">Prénom</label>
-        <input type="text" name="prenom" class="form-control" id="" value="<?php echo "$prenom" ?>" required>
+        <input type="text" name="prenom" class="form-control" id="" value="<?=$prenom?>" required>
       </div>
       <div class="col-md-4">
         <label for="validationDefaultUsername" class="form-label">Adresse mail</label>
         <div class="input-group">
           <span class="input-group-text" id="inputGroupPrepend2">@</span>
-          <input type="text" name="mail" class="form-control" id="" aria-describedby="inputGroupPrepend2" value="<?php echo "$mail" ?>" disabled required>
+          <input type="text" name="mail" class="form-control" id="" aria-describedby="inputGroupPrepend2" value="<?=$mail?>" disabled required>
         </div>
       </div>
       <div class="col-md-6">
         <label for="validationDefault03" class="form-label">Adresse Postale (Numéro, rue, ville)</label>
-        <input type="text" name="adresse" class="form-control" id="" value="<?php echo "$adresse" ?>" required>
+        <input type="text" name="adresse" class="form-control" id="" value="<?=$adresse?>" required>
       </div>
       <div class="col-md-3">
         <label for="validationDefault04" class="form-label">Code postal</label>
-        <input type="text" name="cp" class="form-control" id="" value="<?php echo "$cp" ?>" required>
+        <input type="text" name="postal" class="form-control" id="" value="<?=$cp?>" required>
         </select>
       </div>
       <div class="col-md-4">
         <label for="validationDefault05" class="form-label">Mot de passe</label>
-        <input type="text" name="mdp" class="form-control" id="" value="<?php echo "$mdp" ?>" required>
+        <input type="text" name="mdp" class="form-control" id="" value="<?=$mdp?>" required>
       </div>
-        
-      <input type="button" value="Modifier" name="bouton">
-        
-        
+      <div class="d-grid gap-2 d-md-block">
+      <input class="btn btn-success" type="submit" value="Modifier" name="bouton">
+        </div>
         </div>
 <div class="corpsacc">
     <div class="bg-image" style="background-image: url('images/back1.png');
     height: 100vh">
     </div>
+</div>
 </div>
 <footer class='text-center text-white ' style='background-color: rgba(0, 0, 0, 0.904);color:white;'>
   <!-- Grid container -->

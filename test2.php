@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="cssMusee.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <title>Document</title>
 </head>
 
@@ -38,12 +37,12 @@
                     <img src="images/logo.png" height=50>
                 </div>
                 <div class="col" id="second">
-                    MUSEE DES VINS ET SPIRITUEUX
+                    MUSEE TROP BIEN
                 </div>
                 <div class="col" id="third">
                     <div class="dropdown">
                         <a class="btn sdropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                            <button class="btn btn-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="avatar/<?php echo "$avatar" ?>" height="40"></button>
+                            <button class="btn btn-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="avatar/<?php echo "$avatar" ?>" height="50"></button>
 
                             <div class="offcanvas offcanvas-end" style="background-color: #b22222;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                                 <div class="offcanvas-header">
@@ -101,6 +100,7 @@ nom musee
                                                 </div>
                                             </div>
                                         </div>
+                                        <form action="" method="post">
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingThree">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -111,17 +111,27 @@ nom musee
                                                 <div class="accordion-body">
                                                     <div class="rating">
                                                         <div class="rating">
-                                                            <a href="#5" title="Donner 5 étoiles">☆</a>
-                                                            <a href="#4" title="Donner 4 étoiles">☆</a>
-                                                            <a href="#3" title="Donner 3 étoiles">☆</a>
-                                                            <a href="#2" title="Donner 2 étoiles">☆</a>
-                                                            <a href="#1" title="Donner 1 étoile">☆</a>
+                                                            <a href="#5" name="note" title="Donner 5 étoiles">☆</a>
+                                                            <a href="#4" name="note" title="Donner 4 étoiles">☆</a>
+                                                            <a href="#3" name="note" title="Donner 3 étoiles">☆</a>
+                                                            <a href="#2" name="note" title="Donner 2 étoiles">☆</a>
+                                                            <a href="#1" name="note" title="Donner 1 étoile">☆</a>
                                                         </div><br>
                                                         <input type="button" class="btn btn-success" value="envoyer" name="valider">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                      </form>
+                                      <?php
+                                        if (isset($_POST["bouton"])) {
+                                          $note = $_POST["note"];
+                                          // if ($note=)
+
+                                          $id = mysqli_connect("127.0.0.1", "root", "", "musee");
+                                          $res = mysqli_query($id, "insert into note value (null,'$idu','$note')");
+                                        }
+                                      ?>
                                     </div>
                                 </div>
                                 <div class="position-absolute bottom-0 end-0 p-3 m3">
@@ -144,7 +154,7 @@ nom musee
             width:100%;top:30vh;font-weight: bolder;font-size: larger;text-align:center;">EXPOSITIONS</div>
     </div>
     <div class="corpsexpo">
-        <br><br><br>
+        <br><br><br><br><br><br>
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -180,92 +190,9 @@ nom musee
             </div>
         </div>
     </div>
-
-    <footer class='text-center text-white ' style='background-color: rgba(0, 0, 0, 0.904);color:white;'>
-  <!-- Grid container -->
-  <div class='container pt-4'>
-    <!-- Section: Social media -->
-    <section class='mb-4'>
-      <!-- Facebook -->
-      <a
-        class='btn btn-link btn-floating btn-lg text-light m-1'
-        href='#!'
-        role='button'
-        data-mdb-ripple-color='light'
-        ><i class='bi bi-facebook'></i
-      ></a>
-
-      <!-- Twitter -->
-      <a
-        class='btn btn-link btn-floating btn-lg text-light m-1'
-        href='#!'
-        role='button'
-        data-mdb-ripple-color='light'
-        ><i class='bi bi-twitter'></i
-      ></a>
-
-      <!-- Google -->
-      <a
-        class='btn btn-link btn-floating btn-lg text-light m-1'
-        href='#!'
-        role='button'
-        data-mdb-ripple-color='light'
-        ><i class='bi bi-google'></i
-      ></a>
-
-      <!-- Instagram -->
-      <a
-        class='btn btn-link btn-floating btn-lg text-light m-1'
-        href='#!'
-        role='button'
-        data-mdb-ripple-color='light'
-        ><i class='bi bi-instagram'></i
-      ></a>
-
-      <!-- Linkedin -->
-      <a
-        class='btn btn-link btn-floating btn-lg text-light m-1'
-        href='#!'
-        role='button'
-        data-mdb-ripple-color='light'
-        ><i class='bi bi-linkedin'></i
-      ></a>
-      <!-- Github -->
-      <a
-        class='btn btn-link btn-floating btn-lg text-light m-1'
-        href='#!'
-        role='button'
-        data-mdb-ripple-color='light'
-        ><i class='bi bi-github'></i
-      ></a>
-    </section>
-  
-  
-  
-    <!-- Section: Social media -->
-    <section class='text-center text-light'>
-  
-    <p>
-    Le Musée des Vins et Spiritueux est une marque deposée par ECE Bachelor. <br>
-    Tous droits réservés.
-    </p>
-
-        
-    
-    </section>
-  </div>
-  <!-- Grid container -->
-
-
-
-
-  <!-- Copyright -->
-  <div class='text-center text-light p-3' style='background-color: rgba(0, 0, 0, 0.2);'>
-    © 2022 M.V.S <br>Mentions légales :
-    <a href="https://www.flaticon.com/fr/icones-gratuites/avatar" title="avatar icônes">Avatar icônes créées par Prosymbols Premium - Flaticon</a>
-  </div>
-  <!-- Copyright -->
-</footer>
+    <div class="foot">
+        info légales
+    </div>
 </body>
 
 </html>
