@@ -19,10 +19,13 @@
         <div class="container">
             <div class="row">
                 <div class="col" id="first">
-                    <img src="images/logo.png" height=50>
+                    <a href="accueil.php">
+                        <img src="images/logo.png" height=50>
+                    </a>
+                    
                 </div>
                 <div class="col" id="second">
-                    MUSEE TROP BIEN
+                    MUSEE DU VIN ET DES SPIRITUEUX
                 </div>
                 <div class="col" id="third">
                     <div class="dropdown">

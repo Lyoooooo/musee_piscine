@@ -37,7 +37,7 @@
                     <img src="images/logo.png" height=50>
                 </div>
                 <div class="col" id="second">
-                    MUSEE TROP BIEN
+                    MUSEE DU VIN ET DES SPIRITUEUX
                 </div>
                 <div class="col" id="third">
                     <div class="dropdown">
