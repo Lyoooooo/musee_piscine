@@ -68,22 +68,23 @@
 
                 <?php
                     $id = mysqli_connect("127.0.0.1","root","","musee");
-                    $res = mysqli_query($id, "select * from produit where type='$type'");
+                    $res = mysqli_query($id, "select * from produit where cat='$type'");
                     while($ligne = mysqli_fetch_assoc($res))
                     {
                         $nom = $ligne["nom"];
                         $idp = $ligne["idp"];
+                        $img = $ligne["p1"];
                     
                 ?>
                 <div class="col-sm-4">
                 <br><br>
                     <div class="card" style="width: 18rem;">
-                        <img src="images/exo.jpg" class="card-img-top" height="200">
+                        <img src="alcool/<?php echo"$img"?>" class="card-img-top" height="200">
                         <!-- <img src="images/<?php //echo"$image1"?>" class="card-img-top" height="200"> -->
                         <div class="card-body">
                                 <h5 class="card-title"><?php echo"$nom" ?></h5>
                                 <p class="card-text"></p>
-                                <a href="detail_produit.php?prd=<?php echo"$idp"?>" class="btn btn-primary">Découvrir</a>
+                                <a href="detail_produit.php?idp=<?php echo"$idp"?>" class="btn btn-primary">Découvrir</a>
                         </div>
                     </div>
                 </div>
