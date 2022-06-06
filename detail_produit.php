@@ -164,6 +164,7 @@ nom musee
     <div class="corpsacc">
         <div class="bg-image" style="background-image: url('images/back1.png');
             height: 100vh"><br><br><br>
+             <a class="btn btn-link position-absolute top-10 start-10" href="expo.php">retour</a>
             <div class="container">
         <div class="row">
             <div class="col">

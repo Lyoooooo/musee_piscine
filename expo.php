@@ -183,6 +183,7 @@ mvs_museee
     </div>
 
     <footer class='text-center text-white ' style='background-color: rgba(0, 0, 0, 0.904);color:white;'>
+    <!-- Nos visiteur nous on attribué la note de  ☆/5☆ -->
   <!-- Grid container -->
   <div class='container pt-4'>
     <!-- Section: Social media -->

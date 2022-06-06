@@ -1,7 +1,7 @@
 <?php
 session_start();
 $idu = $_SESSION["idu"];
-$idu = 1;
+// $idu = 1;
 ?>
 
 <?php
