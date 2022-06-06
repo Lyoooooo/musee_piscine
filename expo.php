@@ -38,7 +38,7 @@
                     <img src="images/logo.png" height=50>
                 </div>
                 <div class="col" id="second">
-                    MUSEE DES VINS ET SPIRITUEUX
+                    MUSEE TROP BIEN
                 </div>
                 <div class="col" id="third">
                     <div class="dropdown">
@@ -101,6 +101,7 @@ mvs_museee
                                                 </div>
                                             </div>
                                         </div>
+                                        <form action="" method="post">
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingThree">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -111,17 +112,17 @@ mvs_museee
                                                 <div class="accordion-body">
                                                     <div class="rating">
                                                         <div class="rating">
-                                                            <a href="#5" title="Donner 5 étoiles">☆</a>
-                                                            <a href="#4" title="Donner 4 étoiles">☆</a>
-                                                            <a href="#3" title="Donner 3 étoiles">☆</a>
-                                                            <a href="#2" title="Donner 2 étoiles">☆</a>
-                                                            <a href="#1" title="Donner 1 étoile">☆</a>
+                                                            <a href="modif3.php?note=5&idu=<?php echo"$idu"?>" name="note" title="Donner 5 étoiles">☆</a>
+                                                            <a href="modif3.php?note=4&idu=<?php echo"$idu"?>" name="note" title="Donner 4 étoiles">☆</a>
+                                                            <a href="modif3.php?note=3&idu=<?php echo"$idu"?>" name="note" title="Donner 3 étoiles">☆</a>
+                                                            <a href="modif3.php?note=2&idu=<?php echo"$idu"?>" name="note" title="Donner 2 étoiles">☆</a>
+                                                            <a href="modif3.php?note=1&idu=<?php echo"$idu"?>" name="note" title="Donner 1 étoile">☆</a>
                                                         </div><br>
-                                                        <input type="button" class="btn btn-success" value="envoyer" name="valider">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                      </form>
                                     </div>
                                 </div>
                                 <div class="position-absolute bottom-0 end-0 p-3 m3">
